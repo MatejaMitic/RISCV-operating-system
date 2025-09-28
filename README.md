@@ -5,11 +5,9 @@
   1. [Memory Management](#1-memory-management)  
   2. [Thread Management](#2-thread-management)  
   3. [Semaphores and Synchronization](#3-semaphores-and-synchronization)  
-  4. [Preemption](#4-preemption)  
-  5. [Console I/O](#5-console-io)  
+  4. [Console I/O](#5-console-io)  
 - [Example Usage](#example-usage)  
 - [How to Compile and Run](#how-to-compile-and-run)  
-- [Future Enhancements](#future-enhancements)  
 
 ---
 
@@ -75,26 +73,15 @@ int main() {
     t.start();
     return 0;
 }
+```
+## How to Compile and Run
 
-How to Compile and Run
+### Prerequisites
+- `qemu-riscv64`
+- `make`
+- GCC cross-compiler for RISC-V (provided in the project VM)
 
-Prerequisites:
-
-qemu-riscv64
-
-make
-
-GCC cross-compiler for RISC-V (provided in the project VM)
-
-Compilation:
-
+### Compilation
+```bash
 make qemu
 
-
-Debugging mode:
-
-make qemu-gdb
-
-
-Stopping the emulator:
-The kernel halts QEMU by writing 0x5555 to memory-mapped address 0x100000.
