@@ -64,7 +64,7 @@ It runs in the **QEMU RISC-V emulator**, making it suitable for embedded systems
 void worker(void*) {
     for (int i = 0; i < 5; i++) {
         Console::putc('A' + i);
-        Thread::sleep(10);
+        Thread::thread_dispatch()
     }
 }
 
